@@ -79,4 +79,5 @@ def age_in_days(year, month, day):
     todays_date = datetime.date.today()
     return days_between(year, month, day, todays_date.year, todays_date.month, todays_date.day)
 
-print(age_in_days(2023,10,3))
+# test - days since beginning of common era/calendar
+print(age_in_days(1,1,1))
