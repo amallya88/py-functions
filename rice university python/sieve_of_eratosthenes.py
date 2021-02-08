@@ -4,7 +4,6 @@ https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 """
 import textwrap
 import timeit
-import math
 
 wrapper = textwrap.TextWrapper(width=80)
 
@@ -33,7 +32,7 @@ def get_primes_lst(bound):
     return lst_primes
 
 
-num_of_primes = 1000000
+num_of_primes = 10000000
 start_time = timeit.default_timer()
 lst_primes = get_primes_lst(num_of_primes)
 print("time to generate", num_of_primes, "prime numbers", timeit.default_timer() - start_time)
