@@ -20,3 +20,4 @@ rice_python_courses/intro_scripting_specialization/python_data_visualization/pro
 rice_python_courses/intro_scripting_specialization/python_data_visualization/project_wk2/.idea/vcs.xml
 *.iml
 .idea/
+*.pyc

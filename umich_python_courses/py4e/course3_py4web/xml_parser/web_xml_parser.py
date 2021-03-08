@@ -11,6 +11,7 @@ url = input('Enter url - ')  # http://py4e-data.dr-chuck.net/comments_42.xml
 xml_data = urlopen(url, context=ctx).read()
 root_xml = ET.fromstring(xml_data)
 
+
 lst_comment_cnts = [int(elem.text) for elem in root_xml.findall('.//count')]
 
 print(len(lst_comment_cnts), sum(lst_comment_cnts))
