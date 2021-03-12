@@ -57,17 +57,13 @@ else:
     if len(starturl) < 1:
         starturl = 'http://www.dr-chuck.com/'
 
-    if re.search('http[a-z]://', starturl) is None:
+    if re.search('http[a-z]*://', starturl) is None:
         starturl = 'http://' + starturl
 
     if starturl.endswith('/'):
         starturl = starturl[:-1]
 
-    web = starturl
-    if (starturl.endswith('.htm') or starturl.endswith('.html')):
-        pos = starturl.rfind('/')
-        web = starturl[:pos]
-
+    web = re.findall(r"http[a-z]*://[w]*\.*([a-z]+[^/]*)/*", starturl)[0]
     if (len(web) > 1):
         cur.execute('INSERT OR IGNORE INTO Webs (url) VALUES ( ? )', (web,))
         cur.execute('INSERT OR IGNORE INTO Pages (url, html, new_rank) VALUES ( ?, NULL, 1.0 )', (starturl,))
@@ -140,7 +136,8 @@ while True:
     count = 0
     for tag in tags:
         href = tag.get('href', None)
-        if (href is None): continue
+        if (href is None):
+            continue
         # Resolve relative references like href="/contact"
         up = urlparse(href)
         if (len(up.scheme) < 1):
@@ -155,7 +152,7 @@ while True:
         # Check if the URL is in any of the webs
         found = False
         for web in webs:
-            if (href.startswith(web)):
+            if (web in href):
                 found = True
                 break
         if not found: continue
