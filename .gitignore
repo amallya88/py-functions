@@ -22,3 +22,8 @@ rice_python_courses/intro_scripting_specialization/python_data_visualization/pro
 .idea/
 *.pyc
 umich_python_courses/py4e/course5_capstone/Pythonlearn-16-Data-Viz.pptx
+umich_python_courses/py4e/course5_capstone/gmane/content.sqlite
+umich_python_courses/py4e/course5_capstone/gmane/index.sqlite
+umich_python_courses/py4e/course5_capstone/gmane/mapping.sqlite
+umich_python_courses/py4e/course5_capstone/kjv_crawler/kjv_bible.sqlite
+umich_python_courses/py4e/course5_capstone/kjv_crawler/scrap.py
