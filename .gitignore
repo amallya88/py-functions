@@ -27,3 +27,4 @@ umich_python_courses/py4e/course5_capstone/gmane/index.sqlite
 umich_python_courses/py4e/course5_capstone/gmane/mapping.sqlite
 umich_python_courses/py4e/course5_capstone/kjv_crawler/kjv_bible.sqlite
 umich_python_courses/py4e/course5_capstone/kjv_crawler/scrap.py
+*.sqlite
